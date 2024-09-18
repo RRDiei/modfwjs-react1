@@ -11,8 +11,27 @@ import "./App.css";
 // Plantillas
 import RouteLayout from "./RouteLayout";
 
+// Páginas
+import Home from "./Home";
+
+// Películas
+import peliculas from "./assets/movies.json";
+
+const cincoPeliculas = (peliculas) => {
+  const pelis = [];
+  while (pelis.length < 5) {
+    const nuevaPeli = peliculas.pop();
+    pelis.push(nuevaPeli);
+  }
+  return pelis;
+};
+
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<RouteLayout />}></Route>)
+  createRoutesFromElements(
+    <Route path="/" element={<RouteLayout />}>
+      <Route index element={<Home peliculas={cincoPeliculas(peliculas)}/>} />
+    </Route>
+  )
 );
 
 function App() {
