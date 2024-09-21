@@ -5,9 +5,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-// Hoja de estilos
-import "./App.css";
-
 // Plantillas
 import RouteLayout from "./RouteLayout";
 

@@ -5,7 +5,7 @@ export default function Pelicula(props) {
   const descripcion = `${props.pelicula.overview.slice(0, 150)}...`;
   const cardUrl = props.pelicula.id.toString() ;
   return (
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="Pelicula-card card">
       <img src={img} className="card-img-top" alt={props.pelicula.title} />
       <div className="card-body">
         <h5 className="card-title fw-bold">{props.pelicula.title}</h5>

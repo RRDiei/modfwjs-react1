@@ -1,13 +1,20 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Estilos para el elemento Home */
+.Home-container {
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Estilos para el elemento Pelicula */
+.Pelicula-card {
+  width: 18rem;
+}
+
+/* Estilos para el elemento PeliDetalles */
+.PeliDetalles-card {
+  width: 40%;
+}
+
+.PeliDetalles-contenedor-boton {
+  width: 100%;
 }
