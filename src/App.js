@@ -24,17 +24,13 @@ const creaElementosPelicula = (peliculas) => {
 
 // Crea un array con cinco pelícuas aleatorias a partir del archivo movies.json
 const seleccionaCincoPeliculas = (arrayPeliculas) => {
-  const indexes = new Set();
-  const peliculas = [];
-  while (indexes.size < 5) {
+  const peliculas = new Set();
+  while(peliculas.size < 5) {
     const index = Math.floor(Math.random() * arrayPeliculas.length);
-    indexes.add(index);
+    peliculas.add(arrayPeliculas[index]);
   }
-  for (let index of indexes) {
-    peliculas.push(arrayPeliculas[index]);
-  }
-  return peliculas;
-};
+  return Array.from(peliculas);
+}
 
 // Devuelve una película cuyo id es el que se le ha pasado a la función. Si la película no existe, devuelve undefined
 const seleccionarPeli = (id) => {
@@ -47,6 +43,7 @@ const seleccionarPeli = (id) => {
 const cincoPeliculas = seleccionaCincoPeliculas(peliculas);
 const elementosPelicula = creaElementosPelicula(cincoPeliculas);
 
+// Crea las rutas para la aplicación
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RouteLayout />}>
