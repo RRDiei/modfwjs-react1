@@ -6,9 +6,9 @@ export default function Pelicula(props) {
   const cardUrl = props.pelicula.id.toString() ;
   return (
     <div className="card" style={{ width: "18rem" }}>
-      <img src={img} className="card-img-top" alt="..." />
+      <img src={img} className="card-img-top" alt={props.pelicula.title} />
       <div className="card-body">
-        <h5 className="card-title">{props.pelicula.title}</h5>
+        <h5 className="card-title fw-bold">{props.pelicula.title}</h5>
         <p className="card-text">{descripcion}</p>
         <Link to={cardUrl} className="btn btn-primary">
           + INFO
